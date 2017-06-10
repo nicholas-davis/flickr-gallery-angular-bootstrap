@@ -1,17 +1,18 @@
 ﻿<!--GalleryView-->
+<alert></alert>
 <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
     <a class="navbar-brand" href="#">Flickr Image Gallery</a>
 </nav>
 <main class="container" role="main">
     <div class="row">
-        <div class="col-sm">
-            One of three columns
+        <div ng-if="isLoading">
+            <h1 style="font-size:100px;">loading</h1>
         </div>
-        <div class="col-sm">
-            One of three columns
-        </div>
-        <div class="col-sm">
-            One of three columns
+        <div class="col-sm col-sm-3" ng-repeat="photo in gallery.photo"  ng-if="!isLoading">
+
+            <img class="img-thumbnail" ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.id}}" role="img" />
+            <h5>{{photo.title}}</h5>
+            <p></p>
         </div>
     </div>
 </main>

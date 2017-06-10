@@ -1,5 +1,6 @@
 //Flickr Image Gallery App
 angular.module('flickrImageGalleryApp', [
+    'ui.bootstrap',
     'ui.router',
     'flickrImageGalleryApp.gallery'
 ]).config(['$stateProvider', '$urlRouterProvider',
