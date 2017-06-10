@@ -6,11 +6,6 @@ var uglify = require("gulp-uglify");
 var concat = require('gulp-concat');
 var del = require('del');
 var pump = require('pump');
-var install = require("gulp-install");
-
-//Automatically install packages/dependencies
-gulp.src(["./package.json", "./bower.json"])
-    .pipe(install());
 
 //sass
 gulp.task('sass', function () {
@@ -56,5 +51,5 @@ gulp.task('scripts', function () {
 //watchers
 gulp.task('watch', function () {
     gulp.watch('assets/css/**/*.scss', ['sass']);
-    gulp.watch(['scripts/**/*.js', '!app/app.min.js', '!app/_references.js'], ['scripts']);
+   // gulp.watch(['scripts/**/*.js', '!app/app.min.js', '!app/_references.js'], ['scripts']);
 })
