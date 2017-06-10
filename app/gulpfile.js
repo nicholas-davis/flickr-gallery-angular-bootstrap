@@ -7,19 +7,12 @@ var concat = require('gulp-concat');
 var del = require('del');
 var pump = require('pump');
 
-//sass
-gulp.task('sass', function () {
-    pump([
-        gulp.src('assets/css/**/*.scss'),
-        sass().on('error', sass.logError),
-        gulp.dest('assets/css')
-    ]);
-});
-
 //CSS Minification
 gulp.task('min-css', function () {
     pump([
-        gulp.src('assets/css/global.css'),
+        gulp.src('assets/css/**/*.scss'),
+        sass().on('error', sass.logError),
+        gulp.dest('assets/css'),
         concat('global.min.css'),
         minifyCss(),
         gulp.dest('assets/css')
@@ -50,6 +43,6 @@ gulp.task('scripts', function () {
 
 //watchers
 gulp.task('watch', function () {
-    gulp.watch('assets/css/**/*.scss', ['sass']);
+    gulp.watch('assets/css/**/*.scss', ['min-css']);
    // gulp.watch(['scripts/**/*.js', '!app/app.min.js', '!app/_references.js'], ['scripts']);
 })
