@@ -1,6 +1,7 @@
 //Flickr Image Gallery App
 angular.module('flickrImageGalleryApp', [
-    'ui.router'
+    'ui.router',
+    'flickrImageGalleryApp.gallery'
 ]).config(['$stateProvider', '$urlRouterProvider',
     function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/gallery");
@@ -13,6 +14,9 @@ angular.module('flickrImageGalleryApp', [
         })
     }
 ]).constant('config', {
-    apiUrl: window.location.origin + '/app/api/',
+    apiUrl: 'https://api.flickr.com/services/rest/',
     baseUrl: '/',
 });
+
+//global var
+var galleryModule = angular.module('flickrImageGalleryApp.gallery', []);

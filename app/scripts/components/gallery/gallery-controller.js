@@ -1,6 +1,12 @@
 ﻿//GalleryController
-angular.module('flickrImageGalleryApp', []).controller('GalleryController', ['$scope', '$state', '$stateParams',
-    function ($scope, $state, $stateParams) {
-        console.log('dsfsdf')
+galleryModule.controller('GalleryController', ['$scope', '$state', '$stateParams', 'GalleryService',
+    function ($scope, $state, $stateParams, GalleryService) {
+        
+        //
+        GalleryService.getGalleryConfig().then(function (response) {
+            console.log(response)
+            $scope.gallery = response;
+        });
+
     }
 ]);
