@@ -4,11 +4,20 @@
     <a class="navbar-brand" href="#">Flickr Image Gallery</a>
 </nav>
 <main class="container" role="main">
+    <h1 class="mt-5 mb-4 text-center">Flickr Gallery Search</h1>
     <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group input-group-lg mb-5">
+                <input type="text" class="form-control" placeholder="Search for...">
+                <span class="input-group-btn">
+                    <button class="btn btn-secondary text-uppercase" type="button">search</button>
+                </span>
+            </div>
+        </div>
         <div ng-if="isLoading">
             <h1 style="font-size:100px;">loading</h1>
         </div>
-        <div class="col-sm col-sm-3" ng-repeat="photo in gallery.photo"  ng-if="!isLoading">
+        <div class="col-sm col-sm-3" ng-repeat="photo in gallery.photo" ng-if="!isLoading">
 
             <img class="img-thumbnail" ng-src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}.jpg" alt="{{photo.id}}" role="img" />
             <h5>{{photo.title}}</h5>

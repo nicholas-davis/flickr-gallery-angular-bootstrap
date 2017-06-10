@@ -6008,7 +6008,7 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
 /*alert*/
 .alert {
   z-index: 1000;
-  text-center: center;
+  text-align: center;
   width: 400px;
   height: auto;
   margin-left: auto;
@@ -6018,3 +6018,5 @@ a.text-gray-dark:focus, a.text-gray-dark:hover {
   bottom: inherit;
   right: 0;
   position: absolute; }
+  .alert .close {
+    margin-bottom: -24px; }

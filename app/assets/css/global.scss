@@ -58,6 +58,10 @@
 /*alert*/
 .alert {
     z-index: 1000;
-    text-center: center;
-   @include absolute-center(400px, auto, -3px, 0, inherit, 0);
+    text-align: center;
+    @include absolute-center(400px, auto, -3px, 0, inherit, 0);
+
+    .close {
+        margin-bottom: -24px;
+    }
 }
