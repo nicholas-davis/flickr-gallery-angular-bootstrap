@@ -13,6 +13,11 @@
   ],
   "homepage": "https://github.com/nicholas-davis/flickr-gallery-angular-bootstrap",
   "private": true,
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "bootstrap": "v4.0.0-alpha.6"
+  },
   "ignore": [
     "**/.*",
     "node_modules",
