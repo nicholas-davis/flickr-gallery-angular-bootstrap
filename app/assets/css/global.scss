@@ -4,6 +4,26 @@
 @import "../lib/bootstrap/scss/bootstrap";
 
 /*=================================================*/
+//= Mixins
+/*=================================================*/
+
+@mixin absolute($top, $left, $bottom, $right) {
+    top: $top;
+    left: $left;
+    bottom: $bottom;
+    right: $right;
+    position: absolute;
+}
+
+@mixin absolute-center($width, $height, $top, $left, $bottom, $right) {
+    width: $width;
+    height: $height;
+    margin-left: auto;
+    margin-right: auto;
+    @include absolute($top, $left, $bottom, $right);
+}
+
+/*=================================================*/
 //= Scaffolding
 /*=================================================*/
 
@@ -35,3 +55,9 @@
 /*=================================================*/
 //= Miscellaneous/Extras
 /*=================================================*/
+/*alert*/
+.alert {
+    z-index: 1000;
+    text-center: center;
+   @include absolute-center(400px, auto, -3px, 0, inherit, 0);
+}
