@@ -5,8 +5,9 @@ angular.module('flickrImageGalleryApp', [
     function ($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise("/gallery");
 
-        $stateProvider.state('Gallery', { 
-            templateUrl: 'app/components/gallery/gallery-view.html',
+        $stateProvider.state('Gallery', {
+            url: '^/gallery',
+            templateUrl: 'scripts/components/gallery/gallery-view.html',
             controller: "GalleryController",
             controllerAs: "gallery",
         })
