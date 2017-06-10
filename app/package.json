@@ -1,0 +1,28 @@
+{
+  "name": "flickr-image-gallery-angular-bootstrap",
+  "version": "1.0.0",
+  "description": "Flickr image gallery app using AngularJs, UI Router, and Bootstrap 4",
+  "main": "app.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicholas-davis/flickr-gallery-angular-bootstrap.git"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap",
+    "api"
+  ],
+  "author": "Nick Davis <hire@nicholasdavis.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicholas-davis/flickr-gallery-angular-bootstrap/issues"
+  },
+  "homepage": "https://github.com/nicholas-davis/flickr-gallery-angular-bootstrap#readme"
+}
