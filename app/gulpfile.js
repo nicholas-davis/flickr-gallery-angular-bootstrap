@@ -27,22 +27,24 @@ gulp.task('clean-scripts', function () {
 //Concat and minification scripts
 var jsFiles = [
     'assets/lib/angular/angular.js',
-     'app/scripts/app.js',
-    'app/scripts/**/*.js'
+    'assets/lib/angular-bootstrap/ui-bootstrap-tpls.js',
+    'assets/lib/angular-ui-router/release/angular-ui-router.js',
+     'scripts/app.js',
+    'scripts/**/*.js'
 ];
 
 gulp.task('scripts', function () {
     pump([
         gulp.src(jsFiles),
         concat('app.min.js'),
-        gulp.dest('app'),
+        gulp.dest('scripts'),
         uglify(),
-        gulp.dest('app')
+        gulp.dest('scripts')
     ]);
 });
 
 //watchers
 gulp.task('watch', function () {
     gulp.watch('assets/css/**/*.scss', ['min-css']);
-   // gulp.watch(['scripts/**/*.js', '!app/app.min.js', '!app/_references.js'], ['scripts']);
+    // gulp.watch(['scripts/**/*.js', '!app/app.min.js', '!app/_references.js'], ['scripts']);
 })
