@@ -18,4 +18,4 @@ This application is for demonstration purposes only.
 - Product design went straight to prototype: [PNGs](https://github.com/nicholas-davis/flickr-gallery-angular-bootstrap/tree/master/app/assets/screenshots)
 
 ## Demo
-- Check out the flickr gallery live: [demo](http://sandbox.nicholasdavis.co/projects/flickr-gallery-angular-bootstrap)
+- Check out the flickr gallery live: [demo](http://sandbox.nicholasdavis.com/projects/flickr-gallery-angular-bootstrap)
